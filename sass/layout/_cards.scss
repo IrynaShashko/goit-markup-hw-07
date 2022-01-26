@@ -8,9 +8,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  .cards-list-btn .& + & {
-    margin-left: 8px;
-  }
 }
 
 .cards-btn {
@@ -63,6 +60,11 @@
   }
   &:not(:nth-child(n + 7)) {
     margin-bottom: 30px;
+  }
+}
+.cards-item-btn {
+  .cards-list-btn & + & {
+    margin-left: 8px;
   }
 }
 
