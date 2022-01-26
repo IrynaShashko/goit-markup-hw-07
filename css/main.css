@@ -818,6 +818,7 @@ textarea:hover, textarea:focus, textarea:active {
 
 .footer-social-link:hover, .footer-social-link:focus {
   color: var(--color-btn);
+  background-color: var(--color-active);
 }
 
 .footer-social-icon {
