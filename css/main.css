@@ -59,6 +59,66 @@ body {
   margin-bottom: 0;
 }
 
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--color-active);
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.header__logo--color-black {
+  color: var(--main-text-color);
+}
+
+.footer__logo--color-white {
+  color: var(--color-btn);
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social .social__item + .social__item {
+  margin-left: 10px;
+}
+
+.social__link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-btn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition-duration: 250ms;
+  transition-property: var(--timing-function);
+}
+
+.social__link:hover, .social__link:focus {
+  background-color: var(--color-active);
+  color: var(--color-btn);
+}
+
+.social__icon {
+  fill: currentColor;
+}
+
+.social__icon:hover, .social__icon:focus {
+  fill: var(--color-btn);
+}
+
 input {
   outline: none;
 }
@@ -308,31 +368,6 @@ textarea:hover, textarea:focus, textarea:active {
     /* background-color: var(--color-active); */
 /* } */
 /* ----------------------CHECKBOX 2------------------------------ */
-.logo {
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--color-active);
-}
-
-.header__logo {
-  margin-right: 93px;
-}
-
-.header__logo--color-black {
-  color: var(--main-text-color);
-}
-
-.footer__logo--color-white {
-  color: var(--color-btn);
-}
-
-.footer__logo {
-  margin-bottom: 20px;
-}
-
 .header__container {
   display: flex;
   align-items: center;
@@ -402,6 +437,9 @@ textarea:hover, textarea:focus, textarea:active {
 }
 
 .contacts__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -529,41 +567,6 @@ textarea:hover, textarea:focus, textarea:active {
   margin-bottom: 16px;
 }
 
-.social {
-  display: flex;
-  justify-content: center;
-}
-
-.social .social__item + .social__item {
-  margin-left: 10px;
-}
-
-.team-social-link {
-  width: 44px;
-  height: 44px;
-  background-color: var(--color-btn);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: #afb1b8;
-  transition-duration: 250ms;
-  transition-property: var(--timing-function);
-}
-
-.team-social-link:hover, .team-social-link:focus {
-  background-color: var(--color-active);
-  color: var(--color-btn);
-}
-
-.team-social-icon {
-  fill: currentColor;
-}
-
-.team-social-icon:hover, .team-social-icon:focus {
-  fill: var(--color-btn);
-}
-
 .info {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -675,27 +678,12 @@ textarea:hover, textarea:focus, textarea:active {
   align-items: center;
 }
 
-.client-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.client-list-item {
-  width: 170px;
-  height: 92px;
-}
-
 .client {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.client-list .client-list-item + .client-list-item {
-  margin-left: 30px;
-}
-
-.client-title {
+.client__title {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -706,7 +694,22 @@ textarea:hover, textarea:focus, textarea:active {
   margin-bottom: 50px;
 }
 
-.client-list-link {
+.client__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client__list .client__item + .client__item {
+  margin-left: 30px;
+}
+
+.client__item {
+  width: 170px;
+  height: 92px;
+}
+
+.client__link {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -719,12 +722,12 @@ textarea:hover, textarea:focus, textarea:active {
   transition-property: var(--timing-function);
 }
 
-.client-list-link:hover, .client-list-link:focus {
+.client__link:hover, .client__link:focus {
   color: var(--color-active);
   border-color: var(--color-active);
 }
 
-.client-social-icon {
+.client__icon {
   fill: currentColor;
 }
 
