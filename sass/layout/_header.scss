@@ -1,4 +1,15 @@
-.header-list {
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  & .link:hover,
+  & .link:focus,
+  & .link:active {
+    color: var(--color-active);
+  }
+}
+.site-list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
@@ -7,34 +18,7 @@
   margin-right: 50px;
 }
 
-.contacts {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14px;
-  letter-spacing: 0.02em;
-}
-
-.nav-link {
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--main-text-color);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  display: block;
-  transition-duration: 250ms;
-  transition-property: var(--timing-function);
-}
-
-.header-nav {
-  & .link:hover,
-  & .link:focus,
-  & .link:active {
-    color: var(--color-active);
-  }
-}
-
-.header-nav-link {
+.site-list__item {
   margin-right: 50px;
   position: relative;
   padding-top: 32px;
@@ -52,12 +36,37 @@
     transition: opasity 250ms var(--timing-function);
   }
 }
-
-.header-list .header-nav-link:last-child {
+.site-list .site-list__item:last-child {
   margin-right: 0;
 }
+.site-list .link.current {
+  color: var(--color-active);
+}
 
+.site-list__link {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--main-text-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  display: block;
+  transition-duration: 250ms;
+  transition-property: var(--timing-function);
+}
 .contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .contacts__item + .contacts__item {
+  margin-left: 50px;
+}
+.contacts__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.02em;
   color: var(--second-text-color);
   transition-duration: 250ms;
   transition-property: var(--timing-function);
@@ -67,38 +76,10 @@
   }
 }
 
-.header-social-icon {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
 }
-
-.logo {
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--color-active);
-  margin-right: 93px;
-}
-
-.logo-color {
-  color: var(--main-text-color);
-}
-
-.header-contacts {
-  display: flex;
-  margin-left: auto;
-}
-
-.header-contacts .contacts-item + .contacts-item {
-  margin-left: 50px;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-}
-.header-list .link.current {
-  color: var(--color-active);
+.contacts-tel {
+  margin-left: 30px;
 }
